@@ -157,7 +157,7 @@ export function DottedSurface({
       camera,
       renderer,
       particles: [points],
-      animationId,
+      animationId: animationId!,
       count,
     }
 
