@@ -10,7 +10,7 @@ export function Header() {
         <li>
           <Link
             className="font-medium text-white/70 hover:text-white hover:underline"
-            href={"#"}
+            href={"/"}
           >
             home
           </Link>
@@ -18,7 +18,7 @@ export function Header() {
         <li>
           <Link
             className="font-medium text-white/70 hover:text-white hover:underline"
-            href={"#"}
+            href={"/portfolio"}
           >
             portfolio
           </Link>
