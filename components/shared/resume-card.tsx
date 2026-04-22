@@ -5,124 +5,135 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { motion } from "framer-motion"
-import { Download, Globe, Mail, MapPin, Phone, Star, Briefcase, Code2, GraduationCap, Languages } from "lucide-react"
+import {
+  Download,
+  Globe,
+  Mail,
+  MapPin,
+  Phone,
+  Star,
+  Briefcase,
+  Code2,
+  GraduationCap,
+  Languages,
+} from "lucide-react"
 
 const RESUME_DATA = {
   personalInfo: {
-    name: "John Doe",
-    title: "Senior Full Stack Developer",
+    name: "Джон Доу",
+    title: "Ведущий Full Stack разработчик",
     summary:
-      "Passionate developer with 8+ years of experience building scalable web applications. Specializing in React, Node.js, and cloud architecture.",
-    location: "San Francisco, CA",
+      "Увлечённый разработчик с 8+ годами опыта создания масштабируемых веб-приложений. Специализация: React, Node.js и облачная архитектура.",
+    location: "Сан-Франциско, Калифорния",
     email: "john.doe@example.com",
     phone: "+1 (555) 123-4567",
     avatarUrl: "https://github.com/shadcn.png",
-    initials: "JD",
+    initials: "ДД",
     socials: [
       { name: "GitHub", icon: Mail, url: "#" },
       { name: "LinkedIn", icon: Mail, url: "#" },
-      { name: "Portfolio", icon: Globe, url: "#" },
+      { name: "Портфолио", icon: Globe, url: "#" },
     ],
   },
   experience: [
     {
-      role: "Senior Full Stack Developer",
-      company: "Tech Corp Inc.",
-      period: "2021 - Present",
-      location: "San Francisco, CA",
+      role: "Ведущий Full Stack разработчик",
+      company: "ООО ТехКорп",
+      period: "2021 — н.в.",
+      location: "Сан-Франциско, Калифорния",
       achievements: [
-        "Led the frontend team in rebuilding the core product using Next.js 14 and React, improving performance by 40%",
-        "Architected and implemented a microservices-based backend using Node.js and GraphQL",
-        "Mentored 5 junior developers and conducted weekly code review sessions",
+        "Руководил командой фронтенда при переработке основного продукта с использованием Next.js 14 и React, добившись повышения производительности на 40%",
+        "Спроектировал и внедрил бэкенд на микросервисной архитектуре с использованием Node.js и GraphQL",
+        "Обучал 5 младших разработчиков и проводил еженедельные код-ревью",
       ],
     },
     {
-      role: "Full Stack Developer",
-      company: "StartUp Ltd.",
-      period: "2019 - 2021",
-      location: "Remote",
+      role: "Full Stack разработчик",
+      company: "ООО Стартап",
+      period: "2019 — 2021",
+      location: "Удалённо",
       achievements: [
-        "Developed and maintained multiple client-facing applications with 99.9% uptime",
-        "Implemented CI/CD pipelines using GitHub Actions, reducing deployment time by 60%",
-        "Built a real-time analytics dashboard using React and WebSockets",
+        "Разрабатывал и сопровождал несколько клиентских приложений с временем безотказной работы 99.9%",
+        "Внедрил CI/CD пайплайны с помощью GitHub Actions, сократив время развертывания на 60%",
+        "Создал дашборд аналитики в реальном времени с использованием React и WebSockets",
       ],
     },
     {
-      role: "Junior Developer",
-      company: "Digital Agency",
-      period: "2017 - 2019",
-      location: "New York, NY",
+      role: "Младший разработчик",
+      company: "Цифровое Агентство",
+      period: "2017 — 2019",
+      location: "Нью-Йорк, Нью-Йорк",
       achievements: [
-        "Contributed to 20+ client projects using React, Vue.js, and WordPress",
-        "Optimized web applications for SEO and accessibility (WCAG 2.1 AA)",
+        "Принимал участие в 20+ клиентских проектах с использованием React, Vue.js и WordPress",
+        "Оптимизировал веб-приложения для SEO и доступности (WCAG 2.1 AA)",
       ],
     },
   ],
   projects: [
     {
-      name: "E-commerce Platform",
+      name: "Платформа для интернет-магазина",
       tech: ["Next.js", "Stripe", "Prisma"],
-      desc: "A full-featured online store with real-time inventory management and payment processing.",
+      desc: "Полнофункциональный интернет-магазин с управлением запасами в реальном времени и обработкой платежей.",
       stars: "2.3k",
     },
     {
-      name: "Task Management App",
+      name: "Приложение для управления задачами",
       tech: ["React", "Firebase", "Tailwind"],
-      desc: "Collaborative task manager with drag-and-drop interface and real-time updates.",
+      desc: "Совместный менеджер задач с интерфейсом drag-and-drop и обновлениями в реальном времени.",
       stars: "1.8k",
     },
     {
-      name: "Analytics Dashboard",
+      name: "Аналитическая панель",
       tech: ["Vue.js", "D3.js", "Node.js"],
-      desc: "Real-time data visualization platform with custom chart components.",
+      desc: "Платформа визуализации данных в реальном времени с пользовательскими компонентами графиков.",
       stars: "1.2k",
     },
     {
-      name: "Social Media API",
+      name: "API для социальной сети",
       tech: ["GraphQL", "PostgreSQL", "Redis"],
-      desc: "Scalable REST and GraphQL API serving 100k+ daily requests.",
+      desc: "Масштабируемый REST и GraphQL API, обслуживающий 100 000+ запросов в день.",
       stars: "890",
     },
   ],
   skills: [
     {
-      category: "Frontend",
+      category: "Фронтенд",
       skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js"],
     },
     {
-      category: "Backend",
+      category: "Бэкенд",
       skills: ["Node.js", "Express", "GraphQL", "PostgreSQL", "MongoDB"],
     },
     {
-      category: "DevOps & Tools",
+      category: "DevOps и инструменты",
       skills: ["Docker", "AWS", "CI/CD", "Git", "Vercel"],
     },
   ],
   education: [
     {
-      degree: "BS Computer Science",
-      institution: "University of Technology",
-      period: "2015 - 2019",
-      extra: "GPA: 3.8/4.0",
+      degree: "Бакалавр компьютерных наук",
+      institution: "Технологический университет",
+      period: "2015 — 2019",
+      extra: "Средний балл: 3.8/4.0",
     },
     {
-      degree: "Full Stack Web Development",
-      institution: "Code Academy Bootcamp",
+      degree: "Полный курс веб-разработки (Full Stack)",
+      institution: "Буткемп Code Academy",
       period: "2019",
-      extra: "Certificate",
+      extra: "Сертификат",
     },
     {
-      degree: "AWS Certified Solutions Architect",
+      degree: "Сертифицированный архитектор решений AWS",
       institution: "Amazon Web Services",
       period: "2022",
       extra: null,
     },
   ],
   languages: [
-    { lang: "English", level: "Native", percentage: 100 },
-    { lang: "Spanish", level: "Professional", percentage: 75 },
-    { lang: "French", level: "Intermediate", percentage: 50 },
-    { lang: "Mandarin", level: "Basic", percentage: 30 },
+    { lang: "Английский", level: "Родной", percentage: 100 },
+    { lang: "Испанский", level: "Профессиональный", percentage: 75 },
+    { lang: "Французский", level: "Средний", percentage: 50 },
+    { lang: "Китайский", level: "Базовый", percentage: 30 },
   ],
 }
 
@@ -149,7 +160,7 @@ export function ResumeCard() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="pb-10 pt-12 md:pt-16"
+        className="pt-12 pb-10 md:pt-16"
       >
         <div className="flex flex-col gap-6 md:flex-row md:items-center">
           <motion.div
@@ -233,15 +244,21 @@ export function ResumeCard() {
         >
           <div className="text-center">
             <div className="text-3xl font-bold text-foreground">8+</div>
-            <div className="mt-1 text-xs text-muted-foreground">Years Experience</div>
+            <div className="mt-1 text-xs text-muted-foreground">
+              Years Experience
+            </div>
           </div>
           <div className="border-x text-center">
             <div className="text-3xl font-bold text-foreground">50+</div>
-            <div className="mt-1 text-xs text-muted-foreground">Projects Completed</div>
+            <div className="mt-1 text-xs text-muted-foreground">
+              Projects Completed
+            </div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-foreground">30+</div>
-            <div className="mt-1 text-xs text-muted-foreground">Happy Clients</div>
+            <div className="mt-1 text-xs text-muted-foreground">
+              Happy Clients
+            </div>
           </div>
         </motion.div>
       </motion.div>
@@ -269,10 +286,7 @@ export function ResumeCard() {
 
             <div className="space-y-8">
               {RESUME_DATA.experience.map((job, index) => (
-                <motion.div
-                  key={index}
-                  variants={item}
-                >
+                <motion.div key={index} variants={item}>
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                     <div>
                       <h3 className="text-lg font-semibold text-foreground">
@@ -335,7 +349,9 @@ export function ResumeCard() {
                       <span>{project.stars}</span>
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground">{project.desc}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {project.desc}
+                  </p>
                   <div className="flex flex-wrap gap-1.5">
                     {project.tech.map((tech) => (
                       <Badge key={tech} variant="outline" className="text-xs">

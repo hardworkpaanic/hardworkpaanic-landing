@@ -9,26 +9,18 @@ export function Header() {
       <ul className="flex w-full items-center justify-end gap-8">
         <li>
           <Link
-            className="font-medium text-white/70 hover:text-white hover:underline"
+            className="font-medium hover:underline dark:text-white/70 dark:hover:text-white"
             href={"/"}
-          >
-            home
-          </Link>
-        </li>
-        <li>
-          <Link
-            className="font-medium text-white/70 hover:text-white hover:underline"
-            href={"/portfolio"}
           >
             portfolio
           </Link>
         </li>
         <li>
           <Link
-            className="font-medium text-white/70 hover:text-white hover:underline"
-            href={"#"}
+            className="dark:text-white/70text-white/70 font-medium hover:underline dark:hover:text-white"
+            href={"/info"}
           >
-            price
+            info
           </Link>
         </li>
 
