@@ -7,65 +7,66 @@ import { Separator } from "@/components/ui/separator"
 import { motion } from "framer-motion"
 import {
   Download,
-  Globe,
   Mail,
   MapPin,
   Phone,
   Star,
   Briefcase,
   Code2,
-  GraduationCap,
-  Languages,
+  GitFork,
 } from "lucide-react"
 
 const RESUME_DATA = {
   personalInfo: {
-    name: "Джон Доу",
+    name: "hardworkpaanic",
     title: "Ведущий Full Stack разработчик",
     summary:
       "Увлечённый разработчик с 8+ годами опыта создания масштабируемых веб-приложений. Специализация: React, Node.js и облачная архитектура.",
-    location: "Сан-Франциско, Калифорния",
-    email: "john.doe@example.com",
-    phone: "+1 (555) 123-4567",
-    avatarUrl: "https://github.com/shadcn.png",
-    initials: "ДД",
+    location: "Россия, Астрахань",
+    email: "pavelvalynov355@gmail.com",
+    phone: "+7 (937) 502 44 64",
+    avatarUrl: "/avatar.png",
+    initials: "hard",
     socials: [
-      { name: "GitHub", icon: Mail, url: "#" },
-      { name: "LinkedIn", icon: Mail, url: "#" },
-      { name: "Портфолио", icon: Globe, url: "#" },
+      {
+        name: "GitHub",
+        icon: GitFork,
+        url: "https://github.com/hardworkpaanic",
+      },
     ],
   },
   experience: [
     {
-      role: "Ведущий Full Stack разработчик",
-      company: "ООО ТехКорп",
-      period: "2021 — н.в.",
-      location: "Сан-Франциско, Калифорния",
+      role: "Middle+ Full Stack разработчик",
+      company: "Reboot Digital Studio",
+      period: "2023 — 2025",
+      location: "Санкт-Петербург",
       achievements: [
-        "Руководил командой фронтенда при переработке основного продукта с использованием Next.js 14 и React, добившись повышения производительности на 40%",
-        "Спроектировал и внедрил бэкенд на микросервисной архитектуре с использованием Node.js и GraphQL",
-        "Обучал 5 младших разработчиков и проводил еженедельные код-ревью",
+        "Участвовал в разработке Алхимия Акций: игра для Альфа-Банк: Разрабатывал авторизацию, написание уникальных алгоритмов для основных игровых механик",
+        "Разрабатывал корпоративный сайт закрытого комьюнити Евгения Давыдова для предпринимателей и c-level руководителей из креативных и tech-индустрий",
+        "Помогли немецкому издателю мобильных игр Gameforge сделать редизайн сайта игры с открытым миром. Обновили структуру и дизайн с адаптацией под разные страны.",
       ],
     },
     {
-      role: "Full Stack разработчик",
-      company: "ООО Стартап",
-      period: "2019 — 2021",
-      location: "Удалённо",
+      role: "PHP Full Stack разработчик",
+      company: "Kadema Digital",
+      period: "2020 — 2022",
+      location: "Пенза",
       achievements: [
-        "Разрабатывал и сопровождал несколько клиентских приложений с временем безотказной работы 99.9%",
-        "Внедрил CI/CD пайплайны с помощью GitHub Actions, сократив время развертывания на 60%",
-        "Создал дашборд аналитики в реальном времени с использованием React и WebSockets",
+        "Разрабатывал и сопровождал несколько клиентских сайтов и интернет-магазинов с временем безотказной работы 99.9%",
+        "Разрабатывал внутренние сервисы компаний (чаты, CMS, Админки)",
+        "Создал дашборд аналитики в реальном времени с использованием WebSockets",
       ],
     },
     {
       role: "Младший разработчик",
-      company: "Цифровое Агентство",
-      period: "2017 — 2019",
-      location: "Нью-Йорк, Нью-Йорк",
+      company: "Интернет-системы (inetsys.ru)",
+      period: "2017 — 2020",
+      location: "Удалённо",
       achievements: [
-        "Принимал участие в 20+ клиентских проектах с использованием React, Vue.js и WordPress",
-        "Оптимизировал веб-приложения для SEO и доступности (WCAG 2.1 AA)",
+        "Принимал участие в 20+ клиентских проектах с использованием WordPress Joomla Bitrix",
+        "Оптимизировал веб-сайты для SEO и доступности",
+        "Создавал Pixel Perfect вёрстку, и скрипты на JavaScript",
       ],
     },
   ],
@@ -162,22 +163,16 @@ export function ResumeCard() {
         animate="show"
         className="pt-12 pb-10 md:pt-16"
       >
-        <div className="flex flex-col gap-6 md:flex-row md:items-center">
-          <motion.div
-            variants={item}
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          >
-            <Avatar className="h-28 w-28 md:h-32 md:w-32">
-              <AvatarImage
-                src={RESUME_DATA.personalInfo.avatarUrl}
-                alt="Profile"
-              />
-              <AvatarFallback className="text-2xl">
-                {RESUME_DATA.personalInfo.initials}
-              </AvatarFallback>
-            </Avatar>
-          </motion.div>
+        <div className="flex flex-col items-center gap-6 md:flex-row md:items-center">
+          <Avatar className="h-28 w-28 md:h-50 md:w-50">
+            <AvatarImage
+              src={RESUME_DATA.personalInfo.avatarUrl}
+              alt="Profile"
+            />
+            <AvatarFallback className="text-2xl">
+              {RESUME_DATA.personalInfo.initials}
+            </AvatarFallback>
+          </Avatar>
 
           <div className="flex-1 space-y-3 text-center md:text-left">
             <motion.div variants={item} className="space-y-2">
@@ -244,20 +239,18 @@ export function ResumeCard() {
         >
           <div className="text-center">
             <div className="text-3xl font-bold text-foreground">8+</div>
-            <div className="mt-1 text-xs text-muted-foreground">
-              Years Experience
-            </div>
+            <div className="mt-1 text-xs text-muted-foreground">Опыта</div>
           </div>
           <div className="border-x text-center">
-            <div className="text-3xl font-bold text-foreground">50+</div>
+            <div className="text-3xl font-bold text-foreground">20+</div>
             <div className="mt-1 text-xs text-muted-foreground">
-              Projects Completed
+              Законченных проектов
             </div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-foreground">30+</div>
             <div className="mt-1 text-xs text-muted-foreground">
-              Happy Clients
+              Удовлетворенных клиентов
             </div>
           </div>
         </motion.div>
@@ -281,7 +274,7 @@ export function ResumeCard() {
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
                 <Briefcase className="h-5 w-5 text-primary" />
               </div>
-              <h2 className="text-2xl font-bold">Experience</h2>
+              <h2 className="text-2xl font-bold">Опыт</h2>
             </div>
 
             <div className="space-y-8">
@@ -328,7 +321,7 @@ export function ResumeCard() {
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
                 <Code2 className="h-5 w-5 text-primary" />
               </div>
-              <h2 className="text-2xl font-bold">Featured Projects</h2>
+              <h2 className="text-2xl font-bold">Проекты</h2>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
@@ -373,7 +366,7 @@ export function ResumeCard() {
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
                 <Code2 className="h-5 w-5 text-primary" />
               </div>
-              <h2 className="text-xl font-bold">Skills</h2>
+              <h2 className="text-xl font-bold">Навыки</h2>
             </div>
 
             <div className="space-y-5">
@@ -401,88 +394,11 @@ export function ResumeCard() {
           {/* Separator */}
           <Separator />
 
-          {/* Education Section */}
-          <motion.div variants={item} className="space-y-5">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                <GraduationCap className="h-5 w-5 text-primary" />
-              </div>
-              <h2 className="text-xl font-bold">Education</h2>
-            </div>
-
-            <div className="space-y-4">
-              {RESUME_DATA.education.map((edu, index) => (
-                <div key={index}>
-                  <div className="flex flex-col gap-1">
-                    <h3 className="font-semibold text-foreground">
-                      {edu.degree}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      {edu.institution}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs text-muted-foreground">
-                        {edu.period}
-                      </span>
-                      {edu.extra && (
-                        <Badge variant="outline" className="text-xs">
-                          {edu.extra}
-                        </Badge>
-                      )}
-                    </div>
-                  </div>
-                  {index < RESUME_DATA.education.length - 1 && (
-                    <Separator className="my-3" />
-                  )}
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Separator */}
-          <Separator />
-
-          {/* Languages Section */}
-          <motion.div variants={item} className="space-y-5">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                <Languages className="h-5 w-5 text-primary" />
-              </div>
-              <h2 className="text-xl font-bold">Languages</h2>
-            </div>
-
-            <div className="space-y-4">
-              {RESUME_DATA.languages.map((language, index) => (
-                <div key={index} className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-foreground">
-                      {language.lang}
-                    </span>
-                    <span className="text-xs text-muted-foreground">
-                      {language.level}
-                    </span>
-                  </div>
-                  <div className="h-2 w-full overflow-hidden rounded-full bg-accent/20">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: `${language.percentage}%` }}
-                      transition={{ duration: 1, delay: 0.5 + index * 0.1 }}
-                      className="h-full rounded-full bg-primary"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Separator */}
-          <Separator />
-
           {/* Contact Section */}
           <motion.div variants={item} className="space-y-3">
-            <h3 className="font-semibold text-foreground">Get in Touch</h3>
+            <h3 className="font-semibold text-foreground">Контакты</h3>
             <p className="text-sm text-muted-foreground">
-              Interested in working together? Let's connect!
+              У вас есть вопросы? Свяжитесь со мной!
             </p>
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2 text-muted-foreground">

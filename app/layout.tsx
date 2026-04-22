@@ -1,22 +1,11 @@
-import { Geist, Geist_Mono, Roboto_Slab } from "next/font/google"
-
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Montserrat } from "next/font/google"
 import { cn } from "@/lib/utils"
 import { DottedSurface } from "@/components/ui/dotted-surface"
 import { Header } from "@/components/shared/header/header"
 
-const robotoSlabHeading = Roboto_Slab({
-  subsets: ["latin"],
-  variable: "--font-heading",
-})
-
-const fontSans = Geist({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
-
-const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" })
+const montserrat = Montserrat({ subsets: ["latin"] })
 
 export default function RootLayout({
   children,
@@ -27,13 +16,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn(
-        "antialiased",
-        fontSans.variable,
-        "font-mono",
-        geistMono.variable,
-        robotoSlabHeading.variable
-      )}
+      className={cn("*: antialiased", montserrat.className, "font-mono")}
     >
       <body>
         <ThemeProvider>
@@ -48,7 +31,7 @@ export default function RootLayout({
           />
           <div className="absolute inset-0 flex justify-center">
             <div
-              className="container w-full max-w-300"
+              className="container w-full max-w-300 px-4"
               style={{ zIndex: 10, pointerEvents: "auto" }}
             >
               <Header />

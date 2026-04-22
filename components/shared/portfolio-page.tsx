@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { X, ExternalLink, Mail, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
+import Link from "next/link"
 
 interface Project {
   id: number
@@ -25,339 +26,154 @@ interface Project {
 const PORTFOLIO_DATA: Project[] = [
   {
     id: 1,
-    title: "E-commerce Платформа",
+    title: "Разработал одностраничный сайт для застройщика в Якутске",
     description:
-      "Полноценный интернет-магазин с управлением запасами в реальном времени",
-    tags: ["Next.js", "Full Stack"],
-    images: [
-      "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1556740758-90de374c12ad?w=800&h=500&fit=crop",
-    ],
-    role: "Ведущий разработчик",
-    duration: "3 месяца",
-    technologies: ["Next.js", "Stripe", "Prisma", "PostgreSQL", "Tailwind CSS"],
+      "Создать современный, информативный и конверсионный сайт, который эффективно представляет преимущества ЖК «Звёздный» и стимулирует посетителей к действию.",
+    tags: ["Вёрстка", "Tilda", "Уникальный дизайн", "Разработка сайта"],
+    images: ["/project1/1.png", "/project1/2.png", "/project1/3.png"],
+    role: "Разработка уникального дизайна, вёрстка макета",
+    duration: "1 неделя",
+    technologies: ["Tilda", "Figma"],
     details: [
-      "Разработал комплексное e-commerce решение с нуля",
-      "Внедрил отслеживание запасов в реальном времени с помощью WebSocket",
-      "Интегрировал Stripe для безопасной обработки платежей с поддержкой подписок",
-      "Спроектировал адаптивные UI-компоненты с учетом доступности",
+      "Эстетичный, минималистичный стиль в цветах бренда",
+      "Анимации и параллакс-эффекты",
+      "Адаптив под мобильные и планшеты",
+      "Фокус на «визуальный сторителлинг»",
+      "Адаптивная вёрстка и быстрая загрузка",
+      "Подключение форм заявок и автоворонки",
     ],
     achievements: [
-      "Достиг 99.9% времени безотказной работы в периоды пикового трафика",
-      "Сократил время загрузки страницы на 40% за счет оптимизации",
-      "2.3k звезд на GitHub за компоненты с открытым исходным кодом",
+      "на 210% Увеличение количества заявок в течение 2 месяцев после запуска",
+      "+34% Увеличение времени пребывания на сайте",
+      "до 14% Снижение процента отказов",
+      "Положительные отзывы клиентов",
     ],
-    link: "#",
-    github: "#",
-    stars: "2.3k",
+    link: "https://riavega.ru/",
+    github: "",
+    stars: "",
   },
   {
     id: 2,
-    title: "Приложение для управления задачами",
-    description: "Коллаборативный менеджер задач с интерфейсом drag-and-drop",
-    tags: ["React", "Frontend"],
-    images: [
-      "https://images.unsplash.com/photo-1611224923853-80f0c7118244?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1540350394557-84eb9e495761?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&h=500&fit=crop",
-    ],
-    role: "Frontend-разработчик",
-    duration: "2 месяца",
-    technologies: ["React", "Firebase", "Tailwind CSS", "DnD Kit"],
+    title: "Разработал сайт для дизайн-студии интерьеров в Санкт-Петербурге",
+    description:
+      "Клиент — дизайн-студия, специализирующаяся на создании интерьеров квартир. До начала работ у студии был устаревший сайт, не отражающий уровень проектов и не вызывающий доверия у потенциальных клиентов.",
+    tags: ["WordPress", "CMS", "Вёрстка", "Разработка сайта"],
+    images: ["/project2/1.png", "/project2/2.png", "/project2/3.png"],
+    role: "Ведущий разработчик",
+    duration: "3 недели",
+    technologies: ["WordPress", "HTML", "CSS", "JavaScript"],
     details: [
-      "Разработал интуитивно понятный интерфейс для управления задачами с функцией drag-and-drop",
-      "Реализовал функции совместной работы в реальном времени с использованием Firebase",
-      "Создал настраиваемые доски и рабочие процессы",
-      "Добавил систему уведомлений об обновлениях задач и дедлайнах",
+      "Эстетичный, минималистичный стиль в цветах бренда",
+      "Анимации и параллакс-эффекты",
+      "Адаптивная вёрстка и быстрая загрузка",
+      "Интеграция с CMS WordPress",
+      "Написание текстов под каждую услугу и блок",
+      "Подготовка ALT-тегов и метатегов",
     ],
     achievements: [
-      "1.8k активных пользователей в первый месяц",
-      "Рейтинг удовлетворенности пользователей 4.8/5",
-      "Попал в топ-10 Product Hunt",
+      "с 4 до 14 Рост заявок с сайта за неделю",
+      "+62% Средняя глубина просмотра",
+      "с 14 до 9% Снижение процента отказов",
+      "Сайт вошел в ТОП-30 Яндекса по 8 ключевым запросам за 2 месяца",
     ],
-    link: "#",
-    github: "#",
-    stars: "1.8k",
+    link: "https://flat360.ru/",
+    github: "",
+    stars: "",
   },
   {
     id: 3,
-    title: "Аналитическая панель",
-    description: "Платформа для визуализации данных в реальном времени",
-    tags: ["Vue.js", "Full Stack"],
-    images: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=500&fit=crop",
-    ],
-    role: "Full Stack-разработчик",
-    duration: "4 месяца",
-    technologies: ["Vue.js", "D3.js", "Node.js", "MongoDB", "Socket.io"],
+    title:
+      "Разработал интернет-магазин для молодого и динамично развивающийся магаина",
+    description:
+      "LogiMarkeT – молодой и динамично развивающийся игрок на рынке продаж готового складского оборудования. Специализирующийся на розничной и оптовой продаже широкого ассортимента товаров для обеспечения эффективной организации складских помещений различных отраслей деятельности",
+    tags: ["Интернет-магазин", "Bitrix", "Вёрстка", "Уникальный дизайн"],
+    images: ["/project3/1.png", "/project3/2.png", "/project3/3.png"],
+    role: "Разработка под Bitrix",
+    duration: "1 неделя",
+    technologies: ["Bitrix", "HTML", "CSS", "JavaScript"],
     details: [
-      "Создал комплексную аналитическую платформу с пользовательскими компонентами графиков",
-      "Внедрил потоковую передачу данных в реальном времени с Socket.io",
-      "Создал интерактивные визуализации D3.js для сложных наборов данных",
-      "Спроектировал масштабируемую бэкенд-архитектуру для обработки миллионов событий",
+      "Вёрстка адаптивного макета, интеграция с Bitrix CRM",
+      "Кастомный компонент с умной фильтрацией",
+      "Модуль синхронизации данных с внешней системой",
+      "Интеграционное приложение для Bitrix24 (REST + Вебхуки)",
     ],
     achievements: [
-      "Обрабатывает 10M+ событий ежедневно",
-      "1.2k звезд на GitHub",
-      "Принята 50+ компаниями",
+      "100+ уникальных посищений в неделю",
+      "на 42% увеличения продаж",
     ],
-    link: "#",
-    stars: "1.2k",
+    link: "https://logimarket.ru/",
+    github: "",
+    stars: "",
   },
   {
     id: 4,
-    title: "API для социальных сетей",
-    description: "Масштабируемый REST и GraphQL API для социальных платформ",
-    tags: ["Backend", "API"],
-    images: [
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=500&fit=crop",
-    ],
-    role: "Бэкенд-разработчик",
-    duration: "2 месяца",
-    technologies: ["GraphQL", "PostgreSQL", "Redis", "Node.js", "Docker"],
+    title: "Разработал интернет-магазин для Fabula, магазин аксессуаров",
+    description:
+      "Fabula — интернет-магазин для продажи аксессуаров для женщин и мужчин",
+    tags: ["Bitrix", "Интернет-магазин", "Вёрстка", "Уникальный дизайн"],
+    images: ["/project4/1.png", "/project4/2.png", "/project4/3.png"],
+    role: "Bitrix разработчик, вёрстальщик",
+    duration: "2.5 недели",
+    technologies: ["Bitrix", "HTML", "CSS", "JavaScript", "PHP"],
     details: [
-      "Спроектировал высокопроизводительный API, обрабатывающий 100k+ запросов в день",
-      "Реализовал схему GraphQL с эффективной выборкой данных",
-      "Добавил уровень кэширования Redis для улучшения времени ответа",
-      "Контейнеризировал сервисы с помощью Docker для простоты развертывания",
+      "Вёрстка адаптивного макета, интеграция с Bitrix CRM",
+      "Модуль синхронизации данных с внешней системой",
+      "Интеграционное приложение для Bitrix24 (REST + Вебхуки)",
+      "Настрой CEO и Интеграция с Яндекс Директ, Google Analytics",
     ],
-    achievements: [
-      "890 звезд на GitHub",
-      "Среднее время ответа менее 100 мс",
-      "99.95% времени безотказной работы по SLA",
-    ],
-    github: "#",
-    stars: "890",
+    achievements: ["120+ заказов в месяц", "100+ уникальных посищений"],
+    link: "https://fabulabrand.ru/",
+    github: "",
+    stars: "",
   },
   {
     id: 5,
-    title: "Сайт-портфолио",
-    description: "Современное портфолио с плавной анимацией",
-    tags: ["Next.js", "Frontend"],
-    images: [
-      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=500&fit=crop",
-    ],
-    role: "Frontend-разработчик",
-    duration: "1 месяц",
-    technologies: ["Next.js", "Framer Motion", "Tailwind CSS", "TypeScript"],
+    title: "Разработал оптового сайта для Fabula",
+    description: "Сайт для оптовой продажи аксессуаров для b2b",
+    tags: ["WordPress", "CMS", "Вёрстка", "PHP"],
+    images: ["/project5/1.png", "/project5/2.png", "/project5/3.png"],
+    role: "Разработка под WordPress",
+    duration: "1 неделя",
+    technologies: ["WordPress", "PHP", "JavaScript"],
     details: [
-      "Спроектировал и разработал минималистичный сайт-портфолио",
-      "Реализовал плавные переходы между страницами и анимацию прокрутки",
-      "Создал адаптивные макеты для всех размеров устройств",
-      "Оптимизировал для производительности и SEO",
+      "Динамический калькулятор цены в реальном времени",
+      "Модуль проверки ОГРН/ИНН через Дадату или ФНС",
+      "Генератор коммерческого предложения (КП) в PDF + email",
+      "Микро-API для 1С (обмен остатками и ценами)",
     ],
     achievements: [
-      "Оценка Lighthouse: 98/100",
-      "Время загрузки менее секунды",
-      "Полностью доступен (WCAG 2.1 AA)",
+      "Безопастная проверка клиентов ЮР и Физ. лиц",
+      "Скорость расчетов (калькулятор) увеличина на 62%",
+      "Моштабируемое легковестное API",
     ],
-    link: "#",
-    github: "#",
+    link: "https://opt.fabulabrand.ru/",
+    github: "",
+    stars: "",
   },
   {
     id: 6,
-    title: "Сервис аутентификации",
-    description: "Защищенная система аутентификации с поддержкой OAuth и 2FA",
-    tags: ["Backend", "Security"],
-    images: [
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=800&h=500&fit=crop",
-    ],
-    role: "Бэкенд-разработчик",
-    duration: "2 месяца",
-    technologies: ["Node.js", "JWT", "OAuth 2.0", "Redis", "PostgreSQL"],
-    details: [
-      "Создал комплексный сервис аутентификации с нуля",
-      "Реализовал потоки OAuth 2.0 для нескольких провайдеров",
-      "Добавил двухфакторную аутентификацию с поддержкой TOTP",
-      "Создал управление сессиями с помощью Redis для масштабируемости",
-    ],
-    achievements: [
-      "Обрабатывает 50k+ запросов аутентификации в минуту",
-      "Нет инцидентов безопасности",
-      "Используется в 15+ внутренних проектах",
-    ],
-    github: "#",
-  },
-  {
-    id: 7,
-    title: "Платформа недвижимости",
+    title: "Разработал сайт для видеорегистраторов от производителя РФ ДМТ",
     description:
-      "Система листинга и управления недвижимостью с виртуальными турами",
-    tags: ["Next.js", "Full Stack"],
-    images: [
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1582407973915-b3375e452b08?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800&h=500&fit=crop",
-    ],
-    role: "Full Stack-разработчик",
-    duration: "5 месяцев",
-    technologies: ["Next.js", "Three.js", "Prisma", "PostgreSQL", "MapBox"],
+      "Интернет-магазин для продажи видеорегистраторов / а так же именной сайт компании ДМТ",
+    tags: ["WordPress", "Интернет-магазин", "Разработка сайта"],
+    images: ["/project6/1.png", "/project6/2.png", "/project6/3.png"],
+    role: "PhP разработчик под WordPress",
+    duration: "3 недели",
+    technologies: [],
     details: [
-      "Создал комплексную платформу для листинга недвижимости",
-      "Интегрировал 3D виртуальные туры с использованием Three.js",
-      "Реализовал расширенный поиск с интеграцией MapBox",
-      "Создал админ-панель для управления недвижимостью",
+      "Система разделенных заказов (Order Splitter для логистики)",
+      "Кастомный импорт прайсов с валидацией (Excel/XML Processor)",
+      "Кастомный плагин «Корзина проектов» (Quote & Project Manager)",
+      "Система «Уровни цен + Персональные скидки по договоренности»",
     ],
     achievements: [
-      "500+ объектов недвижимости за первый месяц",
-      "3.5k активных пользователей в месяц",
-      "Освещено в журнале о технологиях в сфере недвижимости",
+      "Привеличение свыше 2000 клиентов за полгода",
+      "Доверие покупателей",
+      "Снижение числа отказов на 70%",
     ],
-    link: "#",
-    github: "#",
-    stars: "950",
-  },
-  {
-    id: 8,
-    title: "Приложение для фитнеса",
-    description: "Мобильный трекер тренировок с аналитикой прогресса",
-    tags: ["React", "Mobile"],
-    images: [
-      "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=500&fit=crop",
-    ],
-    role: "Frontend-разработчик",
-    duration: "3 месяца",
-    technologies: ["React Native", "TypeScript", "Firebase", "Recharts"],
-    details: [
-      "Разработал кроссплатформенное мобильное приложение для отслеживания тренировок",
-      "Реализовал собственную библиотеку упражнений с видео-демонстрациями",
-      "Создал графики прогресса и аналитическую панель",
-      "Добавил социальные функции для обмена достижениями",
-    ],
-    achievements: [
-      "10k+ загрузок в первом квартале",
-      "Рейтинг в магазине приложений 4.6/5",
-      "Попало в подборку фитнес-приложений",
-    ],
-    link: "#",
-    stars: "670",
-  },
-  {
-    id: 9,
-    title: "Система бронирования ресторанов",
-    description: "Платформа для онлайн-бронирования и управления заказами",
-    tags: ["Next.js", "Full Stack"],
-    images: [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800&h=500&fit=crop",
-    ],
-    role: "Ведущий разработчик",
-    duration: "4 месяца",
-    technologies: ["Next.js", "Stripe", "PostgreSQL", "Tailwind CSS", "Resend"],
-    details: [
-      "Создал полную систему бронирования с доступностью в реальном времени",
-      "Интегрировал обработку платежей для депозитов и предзаказов",
-      "Создал админ-панель для персонала ресторана",
-      "Реализовал автоматические уведомления по электронной почте и SMS",
-    ],
-    achievements: [
-      "Обрабатывает 200+ бронирований ежедневно",
-      "Сократил количество неявок на 35%",
-      "Используется 25+ ресторанами",
-    ],
-    link: "#",
-    github: "#",
-    stars: "540",
-  },
-  {
-    id: 10,
-    title: "DevOps инструмент мониторинга",
-    description: "Мониторинг инфраструктуры с системой оповещения",
-    tags: ["Backend", "DevOps"],
-    images: [
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
-    ],
-    role: "Бэкенд-разработчик",
-    duration: "6 месяцев",
-    technologies: ["Go", "Grafana", "Prometheus", "Docker", "Kubernetes"],
-    details: [
-      "Создал комплексную панель мониторинга инфраструктуры",
-      "Реализовал пользовательские правила оповещения с несколькими каналами уведомлений",
-      "Создал автоматические триггеры масштабирования для кластеров Kubernetes",
-      "Разработал функции анализа исторических данных и создания отчетов",
-    ],
-    achievements: [
-      "Отслеживает 500+ сервисов в нескольких кластерах",
-      "Сократил время реагирования на инциденты на 60%",
-      "Открытый исходный код с 1.1k звезд на GitHub",
-    ],
-    github: "#",
-    stars: "1.1k",
-  },
-  {
-    id: 11,
-    title: "Образовательная платформа",
-    description: "Система онлайн-обучения с видеокурсами",
-    tags: ["Next.js", "Frontend"],
-    images: [
-      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=500&fit=crop",
-    ],
-    role: "Full Stack-разработчик",
-    duration: "4 месяца",
-    technologies: ["Next.js", "Mux", "Prisma", "PostgreSQL", "Stripe"],
-    details: [
-      "Разработал полную LMS с инструментами для создания курсов",
-      "Интегрировал видеостриминг с Mux",
-      "Реализовал отслеживание прогресса и выдачу сертификатов",
-      "Создал опции подписки и разовых платежей",
-    ],
-    achievements: [
-      "50+ созданных курсов в первом квартале",
-      "2k+ записанных студентов",
-      "95% коэффициент завершения курсов",
-    ],
-    link: "#",
-    stars: "780",
-  },
-  {
-    id: 12,
-    title: "Трекер крипто-портфеля",
-    description: "Отслеживание криптовалют в нескольких сетях с аналитикой",
-    tags: ["React", "API", "Web3"],
-    images: [
-      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1642104704074-907c0698cbd9?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=500&fit=crop",
-    ],
-    role: "Frontend-разработчик",
-    duration: "2 месяца",
-    technologies: [
-      "React",
-      "TypeScript",
-      "Web3.js",
-      "Coingecko API",
-      "Chart.js",
-    ],
-    details: [
-      "Создал интерфейс для отслеживания портфеля в нескольких сетях",
-      "Интегрировал ценовые ленты в реальном времени из нескольких источников",
-      "Создал детальную аналитику и графики производительности",
-      "Реализовал подключение кошелька для автоматической синхронизации портфеля",
-    ],
-    achievements: [
-      "Отслеживает активы на сумму $10M+",
-      "1.5k активных пользователей",
-      "Поддерживает 8+ блокчейн-сетей",
-    ],
-    link: "#",
-    github: "#",
-    stars: "620",
+    link: "https://dmtreg.ru/",
+    github: "",
+    stars: "",
   },
 ]
 
@@ -497,15 +313,16 @@ function ProjectModal({
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-2 p-4">
               {project.link && (
-                <Button className="flex-1 gap-2" size="sm">
-                  <ExternalLink className="h-4 w-4" />
-                  Live Demo
+                <Button className="w-full" size="sm">
+                  <Link className="" href={project.link}>
+                    {"Перейти на сайт" + " ->"}
+                  </Link>
                 </Button>
               )}
               {project.github && (
                 <Button variant="outline" className="flex-1 gap-2" size="sm">
                   <Mail className="h-4 w-4" />
-                  Source
+                  Открыть на GitHub
                 </Button>
               )}
             </div>
@@ -529,7 +346,7 @@ function ProjectModal({
                   <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
                     {project.title}
                   </h2>
-                  <p className="mt-2 text-lg text-muted-foreground">
+                  <p className="mt-2 text-[15px] text-muted-foreground">
                     {project.description}
                   </p>
                 </div>
@@ -544,12 +361,12 @@ function ProjectModal({
 
                 <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                   <div>
-                    <span className="font-medium text-foreground">Role: </span>
+                    <span className="font-medium text-foreground">Роль: </span>
                     {project.role}
                   </div>
                   <div>
                     <span className="font-medium text-foreground">
-                      Duration:{" "}
+                      Продолжительность:{" "}
                     </span>
                     {project.duration}
                   </div>
@@ -565,7 +382,7 @@ function ProjectModal({
               {/* Project Details */}
               <div className="mb-6 space-y-3">
                 <h3 className="text-lg font-semibold text-foreground">
-                  What I Did
+                  Что я сделал
                 </h3>
                 <ul className="space-y-2 text-muted-foreground">
                   {project.details.map((detail, index) => (
@@ -586,7 +403,7 @@ function ProjectModal({
               {/* Achievements */}
               <div className="mb-6 space-y-3">
                 <h3 className="text-lg font-semibold text-foreground">
-                  Key Achievements
+                  Достижения
                 </h3>
                 <ul className="space-y-2 text-muted-foreground">
                   {project.achievements.map((achievement, index) => (
@@ -633,7 +450,7 @@ export function PortfolioPage() {
             Портфолио
           </h1>
           <p className="mt-2 text-lg text-muted-foreground">
-            Коллекция проектов, демонстрирующих мои работы
+            Коллекция проектов, демонстрирующих мои способности
           </p>
         </div>
 
@@ -672,7 +489,7 @@ export function PortfolioPage() {
                 className={`px-4 py-2 text-sm font-medium transition-colors ${
                   selectedTag === tag
                     ? "bg-primary text-primary-foreground"
-                    : "border border-border bg-transparent text-accent-foreground hover:bg-accent/80"
+                    : "border border-border text-accent-foreground hover:bg-accent/80"
                 }`}
               >
                 {tag}
@@ -734,7 +551,7 @@ export function PortfolioPage() {
             animate={{ opacity: 1 }}
             className="py-12 text-center text-muted-foreground"
           >
-            <p className="text-lg">No projects found for this category</p>
+            <p className="text-lg">Нет проектов для этой категории</p>
           </motion.div>
         )}
       </motion.div>

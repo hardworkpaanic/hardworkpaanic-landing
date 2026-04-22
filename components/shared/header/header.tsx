@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 export function Header() {
@@ -12,7 +11,7 @@ export function Header() {
             className="font-medium hover:underline dark:text-white/70 dark:hover:text-white"
             href={"/"}
           >
-            portfolio
+            Портфолио
           </Link>
         </li>
         <li>
@@ -20,13 +19,13 @@ export function Header() {
             className="dark:text-white/70text-white/70 font-medium hover:underline dark:hover:text-white"
             href={"/info"}
           >
-            info
+            Информация
           </Link>
         </li>
 
-        <Button variant={"outline"} className="text-[14px]" size={"lg"}>
+        {/*<Button variant={"outline"} className="text-[14px]" size={"lg"}>
           sign in
-        </Button>
+        </Button>*/}
       </ul>
     </header>
   )
