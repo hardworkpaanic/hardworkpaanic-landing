@@ -2,7 +2,7 @@
 
 import { Badge } from "@/components/ui/badge"
 import { motion, AnimatePresence } from "framer-motion"
-import { X, ExternalLink, Mail, Star } from "lucide-react"
+import { X, Mail, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 import Link from "next/link"
@@ -313,8 +313,8 @@ function ProjectModal({
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-2 p-4">
               {project.link && (
-                <Button className="w-full" size="sm">
-                  <Link className="" href={project.link}>
+                <Button className="h-10 w-full" asChild size="sm">
+                  <Link className="font-bold" href={project.link}>
                     {"Перейти на сайт" + " ->"}
                   </Link>
                 </Button>
